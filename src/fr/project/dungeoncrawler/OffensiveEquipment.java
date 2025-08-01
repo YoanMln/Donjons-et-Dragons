@@ -23,4 +23,16 @@ public class OffensiveEquipment {
         return attackLevel;
     }
 
+    public void setType(EquipmentType type) {
+        this.Type = type;
+    }
+
+    public void setName(String name) {
+        this.Name = name;
+    }
+
+   public void setAttackLevel(int attackLevel){
+    this.attackLevel=attackLevel;
+   }
+
 }
