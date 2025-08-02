@@ -1,6 +1,6 @@
 package fr.project.dungeoncrawler;
 
-public class DefensiveEquipment {
+public abstract class DefensiveEquipment {
     public enum EquipmentType { SHIELD, POTION }
 
     private EquipmentType equipmentType;
@@ -43,4 +43,6 @@ public class DefensiveEquipment {
     public String toString() {
         return name + " (+" + lifeLevel + " HP)";
     }
+
+   public abstract void use();
 }
