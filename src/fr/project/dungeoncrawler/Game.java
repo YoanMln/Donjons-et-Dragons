@@ -99,33 +99,45 @@ public class Game {
 
             int choice = scanner.nextInt(); // recuperation du choix de l'utilisateur (entrée clavier)
             scanner.nextLine();
+
+            OffensiveEquipment weapon = null;
+
             switch (choice) { // selon le choix, instancie l'arme correspondante et l'assigne au personnage
-                case 1: player.setWeapon(new OffensiveEquipment(OffensiveEquipment.EquipmentType.WEAPON, "Massue", 3));
+                case 1:
+                        weapon = new Weapon.Sword();
                 break;
 
-                case 2: player.setWeapon(new OffensiveEquipment(OffensiveEquipment.EquipmentType.WEAPON, "Epee", 5));
+                case 2:
+                        weapon = new Weapon.Massue();
                 break;
                 default: // Si  choix invalide  une arme par défaut est definie
                     menu.DisplayInvalidChoice();
-                    player.setWeapon(new OffensiveEquipment(OffensiveEquipment.EquipmentType.WEAPON,"Massue", 3));
-
-
+                    weapon = new Weapon.Massue();
+                    break;
             }
+            player.setWeapon(weapon);
+
         } else if (player.getType().equals("Wizzard")) {
            menu.DisplayWeaponChoiceWizzard();
 
            int choice = scanner.nextInt();
             scanner.nextLine();
 
+            OffensiveEquipment spell = null;
+
             switch (choice) {
-                case 1: player.setWeapon(new OffensiveEquipment(OffensiveEquipment.EquipmentType.SPELL, "Boule de feu", 4));
+                case 1:
+                    spell = new Spell.FireBall();
                 break;
-                case 2: player.setWeapon(new OffensiveEquipment(OffensiveEquipment.EquipmentType.SPELL, "Eclair", 2));
+                case 2:
+                    spell = new Spell.Spark();
                 break;
                 default:
                     menu.DisplayInvalidChoice();
-                    player.setWeapon(new OffensiveEquipment(OffensiveEquipment.EquipmentType.SPELL, "Boule de feu", 4));
+                    spell = new Spell.Spark();
+                    break;
             }
+            player.setWeapon(spell);
         }
         System.out.println("Arme choisie:" + player.getWeapon().getName() + "(+ " + player.getWeapon().getAttackLevel() + "atk)"); // // Affichage du résultat  nom et puissance de l'arme choisi
     }

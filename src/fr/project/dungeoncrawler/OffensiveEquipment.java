@@ -1,6 +1,6 @@
 package fr.project.dungeoncrawler;
 
-public class OffensiveEquipment {
+public abstract class OffensiveEquipment {
     public enum EquipmentType {WEAPON, SPELL}
 
     private EquipmentType Type;
@@ -34,5 +34,14 @@ public class OffensiveEquipment {
    public void setAttackLevel(int attackLevel){
     this.attackLevel=attackLevel;
    }
+
+
+
+   @Override
+    public String toString() {
+        return "Nom: " + getName() + ", Attaque: " + getAttackLevel() + ", Type: " + getType();
+   }
+
+   public abstract void use();
 
 }
