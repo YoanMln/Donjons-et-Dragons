@@ -1,5 +1,6 @@
 package fr.project.dungeoncrawler;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
@@ -51,6 +52,7 @@ public class Game {
             board.move(diceRoll);
             System.out.println(" Position actuelle : Case " +
                     board.getCurrentPosition() + " / " + board.getFinalPosition());
+            board.interactWithCurrentCell(player);
         }
 
         menu.DisplayEndBoard();
