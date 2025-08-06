@@ -12,4 +12,9 @@ public class Wizzard extends Character {
         this.life = 6;
         this.attack = 8;
     }
+
+    @Override
+    public String toString() {
+        return "Type: " + type + " | hp: " + life + " | attack: " + attack;
+    }
 }

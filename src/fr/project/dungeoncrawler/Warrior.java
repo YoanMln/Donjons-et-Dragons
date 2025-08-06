@@ -12,4 +12,9 @@ public class Warrior extends Character {
         this.life = 10;
         this.attack = 5;
     }
+
+    @Override
+    public String toString() {
+        return "Type: " + type + " | hp: " + life + " | attack: " + attack;
+    }
 }
