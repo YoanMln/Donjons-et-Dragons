@@ -16,7 +16,7 @@ public class Spell extends OffensiveEquipment {
        }
        @Override
        public void use(){
-           System.out.println("Vous utilisez le sort boule de feu");
+
        }
    }
 

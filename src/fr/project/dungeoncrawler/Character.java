@@ -9,6 +9,8 @@ public abstract class Character {
 
     public abstract void initializeStats();
 
+
+
     public void setName(String newName) {
         this.name = newName;
     }

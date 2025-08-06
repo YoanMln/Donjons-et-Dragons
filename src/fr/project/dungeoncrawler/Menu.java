@@ -9,8 +9,9 @@ public class Menu {
 
         System.out.println("Welcome to DungeonCrawler!");
         System.out.println("1. Créer un nouveau personnage");
-        System.out.println("2. Démarrer la partie");
-        System.out.println("3. Quitter le jeu");
+        System.out.println("2. Afficher les personnages");
+        System.out.println("3. Démarrer la partie");
+        System.out.println("4. Quitter le jeu");
     }
 
     public void DisplayCharacterMenu() {
@@ -70,5 +71,8 @@ public class Menu {
         System.out.println("2 Eclair (+2 atk)");
     }
 
+    public void DisplayAlertWeaponChoice() {
+        System.out.println("Vous devez entrer un chiffre valide");
+    }
 
 }
